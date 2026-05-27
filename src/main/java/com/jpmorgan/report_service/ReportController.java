@@ -23,31 +23,6 @@ public class ReportController {
         this.reportService = reportService;
     }
 
-    @GetMapping("/reports")
-    public Map<String, String> getReports(){
-        Map<String, String> response = new HashMap<>();
-        response.put("status", "running");
-        response.put("service", "JPMorgan Report Service");
-        response.put("version", "1.0");
-        return response;
-    }
-    @GetMapping("/reports/status")
-    public Map<String, String> getStatus() {
-        Map<String, String> status = new HashMap<>();
-        status.put("health", "UP");
-        status.put("database", "connected");
-        status.put("reportCount", "120");
-        return status;
-    }
-    @GetMapping("/reports/{id}")
-    public Map<String, String> getReportById(@PathVariable int id) {
-        Map<String, String> report = new HashMap<>();
-        report.put("reportId", String.valueOf(id));
-        report.put("name", "Capital Assessment Report");
-        report.put("status", "completed");
-        return report;
-    }
-
     @PostMapping("/reports")
     public Report createReport(@RequestBody Report newReport) {
 
