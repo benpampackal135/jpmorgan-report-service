@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ReportServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReportServiceApplication.class, args);
+
+        SpringApplication.run(ReportServiceApplication.class, args);
 	}
 
 }
